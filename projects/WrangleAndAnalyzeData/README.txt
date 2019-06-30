@@ -1,4 +1,4 @@
-### Udacity - Wrangle and Analyze Data - Data Analyst Nanodegree Project
+## Udacity - Wrangle and Analyze Data - Data Analyst Nanodegree Project
 
 Objective is to gather, assess, clean and subsequently briefly analyse the tweet 
 data obtained from WeRateDogs twitter channel. The analysis is not meant to be 
@@ -7,7 +7,7 @@ or dog stages defined within tweets, because the nature of the chanel is not to 
 ultimate judges.
 
 
-### Data Sources
+## Data Sources
 
 The following three data sources were used:
 
@@ -18,7 +18,7 @@ The following three data sources were used:
 3. Each tweet's retweet count and favorite ("like") count at minimum, and any additional data was to be downloaded using the tweet IDs in the WeRateDogs Twitter archive, by querying the Twitter API for each tweet's JSON data using Python's Tweepy library, and stored line by line (each line in JSON format) to new file called tweet_json.txt file. 
 
 
-### Getting Started
+## Getting Started
 
 Data originally provided: 'twitter-archive-enhanced.csv' and 'twitter_image_class.csv'
 Twitter API - all queried JSON data: 'tweet_json.txt'
@@ -33,6 +33,6 @@ Final reports:
  - Data analysis report: 'act_report.ipynb' and 'act_report.html'
 
 
-### Prerequisites
+## Prerequisites
 
 Jupyter Notebooks, original data provided, Twitter API access (or use 'tweet_json.txt' instead)
