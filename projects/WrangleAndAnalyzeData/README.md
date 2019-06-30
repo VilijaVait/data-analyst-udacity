@@ -30,20 +30,24 @@ The following three data sources were used:
 Getting Started
 ---------------
 
-Data originally provided: 'twitter-archive-enhanced.csv' and
-'twitter\_image\_class.csv' Twitter API - all queried JSON data:
-'tweet\_json.txt' Twitter API select dataframe:
-'twitter\_status\_dogs.csv' Data files after cleaning:
-'twitter\_archive\_master.csv' and 'twitter\_archive\_master\_class.csv'
-Working Jupyter Notebooks: - Gathering:
-'wrangle\_project\_notebook\_gather\_nokeys.ipynb' - Cleaning:
-'wrangle\_project\_notebook\_clean.ipynb' - Analysis:
-'wrangle\_project\_notebook\_visual.ipynb' Final reports: - Wrangling
-report: 'wrangle\_report.ipynb' and 'wrangle\_report.html' - Data
-analysis report: 'act\_report.ipynb' and 'act\_report.html'
+Data originally provided: `twitter-archive-enhanced.csv` and `twitter\_image\_class.csv` 
+
+Twitter API - all queried JSON data: `tweet\_json.txt` 
+
+Twitter API select dataframe: `twitter\_status\_dogs.csv` 
+
+Data files after cleaning: `twitter\_archive\_master.csv` and `twitter\_archive\_master\_class.csv`
+
+Working Jupyter Notebooks: 
+> Gathering: 'wrangle\_project\_notebook\_gather\_nokeys.ipynb' 
+> Cleaning: 'wrangle\_project\_notebook\_clean.ipynb' 
+> Analysis: 'wrangle\_project\_notebook\_visual.ipynb' 
+
+Final reports: 
+> Wrangling report: 'wrangle\_report.ipynb' and 'wrangle\_report.html' 
+> Data analysis report: 'act\_report.ipynb' and 'act\_report.html'
 
 Prerequisites
 -------------
 
-Jupyter Notebooks, original data provided, Twitter API access (or use
-'tweet\_json.txt' instead)
+Jupyter Notebooks, original data provided, Twitter API access (or use `tweet\_json.txt` instead)
