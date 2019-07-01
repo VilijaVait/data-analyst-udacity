@@ -13138,7 +13138,7 @@ div#notebook {
 </li>
 <li><p>The tweet image predictions, i.e., what breed of dog (or other object, animal, etc.) is present in each tweet according to a neural network. This file (image_predictions.tsv) was hosted on Udacity's and was downloaded programmatically here: <a href="https://d17h27t6h515a5.cloudfront.net/topher/2017/August/599fd2ad_image-predictions/image-predictions.tsv">https://d17h27t6h515a5.cloudfront.net/topher/2017/August/599fd2ad_image-predictions/image-predictions.tsv</a></p>
 </li>
-<li><p>Each tweet's retweet count and favorite ("like") count at minimum, and any additional data was to be downloaded using the tweet IDs in the WeRateDogs Twitter archive, by querying the Twitter API for each tweet's JSON data using Python's Tweepy library, and stored line by line (each line in JSON format) to new file called tweet_json.txt file.</p>
+<li><p>Each tweet's retweet count and favorite ("like") count at minimum, and any additional data was to be downloaded using the tweet IDs in the WeRateDogs Twitter archive, by querying the Twitter API for each tweet's JSON data using Python's Tweepy library, and stored line by line (each line in JSON format) to new file called 'tweet_json.txt' file.</p>
 </li>
 </ol>
 
@@ -13148,7 +13148,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Gathering-data">Gathering data<a class="anchor-link" href="#Gathering-data">&#182;</a></h3><blockquote><p>Full operations in 'wrangle_project_notebook_gather.ipynb'</p>
+<h3 id="Gathering-data">Gathering data<a class="anchor-link" href="#Gathering-data">&#182;</a></h3><blockquote><p>Full operations in <code>wrangle_act.ipynb</code></p>
 </blockquote>
 <p>The WeRateDogs Twitter archive was provided as file, so this is to be read streight from the file. The archive contained 2356 tweets of which 181 retweets (note, deleting retweets was one of last steps of data cleaning, because no reason not to gather and save all data first, this particular load of tweets was not going to impact the speed/memory in a significant way).</p>
 <p>The image classification file was provided as URL, and read straight into pandas dataframe with pd.read_csv, using tab separator '\t'. Quick immediate examination showed 2075 entries and no null entries, thus short of 2356 tweets in the archive and 2335 tweets that were actually dowloaded.</p>
@@ -13176,7 +13176,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Assessing/Cleaning-data">Assessing/Cleaning data<a class="anchor-link" href="#Assessing/Cleaning-data">&#182;</a></h3><blockquote><p>Full operations in <code>wrangle_project_notebook_clean.ipynb</code></p>
+<h3 id="Assessing/Cleaning-data">Assessing/Cleaning data<a class="anchor-link" href="#Assessing/Cleaning-data">&#182;</a></h3><blockquote><p>Full operations in <code>wrangle_act.ipynb</code></p>
 </blockquote>
 <p>The data was called into the following dataframes:</p>
 
@@ -13186,7 +13186,7 @@ div#notebook {
 
 </code></pre>
 <p>Substantial part of assessing and cleaning was due to the fact that the tweet archive provided (in <code>df_archive</code>) could not be fully relied on as accurate, and therefore comparisons had to be carried out between the archive data and the data queried from the twitter API (in <code>df_status</code>).</p>
-<p>The actual tidying/cleaning steps included (full list in <code>wrangle_project_notebook_clean.ipynb</code>)</p>
+<p>The actual tidying/cleaning steps included (full list in <code>wrangle_act.ipynb</code>)</p>
 <ul>
 <li>joining <code>df_archive</code> and <code>df_status</code>, to create <code>tweet_clean</code>: after it was cleaned, it compled with tidyness protocol, hence no reason to keep it in two separate tables; <blockquote><p>sidenote, after cleaning it did transpire that 'dog stages' may not be unique for each tweet (but each tweet may contain several dogs with several stages, or one dog could be in two stages), so it could make sense to have a separate table matching tweets to stages as this is many-to-many relationship; but it was already beyond the scope of this project.</p>
 </blockquote>
@@ -13202,8 +13202,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Data-analysis">Data analysis<a class="anchor-link" href="#Data-analysis">&#182;</a></h3><blockquote><p>Full operations in 'wrangle_project_notebook_visual.ipynp'</p>
-<p>Full analysis report in 'act_report.ipynp'</p>
+<h3 id="Data-analysis">Data analysis<a class="anchor-link" href="#Data-analysis">&#182;</a></h3><blockquote><p>Full operations in <code>wrangle_act.ipynb</code></p>
+<p>Full analysis report in <code>act_report.ipynp</code></p>
 </blockquote>
 <p>Analysis consisted of quick examination of:</p>
 <ul>
