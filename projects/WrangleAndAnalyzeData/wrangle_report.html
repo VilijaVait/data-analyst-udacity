@@ -13186,14 +13186,23 @@ div#notebook {
 
 </code></pre>
 <p>Substantial part of assessing and cleaning was due to the fact that the tweet archive provided (in <code>df_archive</code>) could not be fully relied on as accurate, and therefore comparisons had to be carried out between the archive data and the data queried from the twitter API (in <code>df_status</code>).</p>
-<p>The actual tidying/cleaning steps included (full list in <code>wrangle_act.ipynb</code>)</p>
+<p>The detailed tidying and cleaning steps full list is in <code>wrangle_act.ipynb</code>:</p>
 <ul>
-<li>joining <code>df_archive</code> and <code>df_status</code>, to create <code>tweet_clean</code>: after it was cleaned, it compled with tidyness protocol, hence no reason to keep it in two separate tables; <blockquote><p>sidenote, after cleaning it did transpire that 'dog stages' may not be unique for each tweet (but each tweet may contain several dogs with several stages, or one dog could be in two stages), so it could make sense to have a separate table matching tweets to stages as this is many-to-many relationship; but it was already beyond the scope of this project.</p>
-</blockquote>
+<li><p>First, copies of the data propr to cleaning in <code>archive_clean</code>,<code>status_clean</code>,<code>class_clean</code></p>
+</li>
+<li><p>Ordered by execution, in total 2 tidyness issues addressed and 11 cleanliness issued.</p>
+</li>
+<li><p>Note that also each "cleanliness" issue that dealt with comparing two columns containing the same information, eg issues #3, #4, #5, #7, #9 had tidyness resolved as well, because they were dealing with ensuring that <strong>each variable formed a column</strong>, and only that one column (avoiding the same variable being duplicated in second column).</p>
 </li>
 </ul>
+<p>On final two tables created (<code>tweet_clean</code> and <code>class_clean</code>):</p>
 <ul>
-<li>creating <code>class_df</code> from <code>df_class</code>:  It seems that the image classification table <code>class_clean</code> (previously <code>df_class</code>) could also be joined (to <code>tweet_clean</code>) without causing tidyness issues, that said, since it is such a different "unit" of information, with its own independent source (ie classification model output), it was kept separate.</li>
+<li><p>joining <code>archive_clean</code> and <code>status_clean</code>, to create <code>tweet_clean</code>: after it was cleaned, it complied with tidyness protocol, hence no reason to keep it in two separate tables;</p>
+<blockquote><p>sidenote, after cleaning it did transpire that 'dog stages' may not be unique for each tweet (but each tweet may contain several dogs with several stages, or one dog could be in two stages), so it could make sense to have a separate table matching tweets to stages as this is many-to-many relationship; but it was already beyond the scope of this project.</p>
+</blockquote>
+</li>
+<li><p><code>class_clean</code>  It seems that the image classification table <code>class_clean</code> (previously <code>df_class</code>) could also be joined (to <code>tweet_clean</code>) without causing tidyness issues, that said, since it is such a different "unit" of information, with its own independent source (ie classification model output), it was kept separate.</p>
+</li>
 </ul>
 
 </div>
