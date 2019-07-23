@@ -8,7 +8,7 @@ dog ratings actaully given, or dog stages defined within tweets, because
 the nature of the chanel is not to be ultimate judges.
 
 Data Sources
-------------
+--------------
 
 The following three data sources were used:
 
@@ -28,7 +28,7 @@ The following three data sources were used:
     file.
 
 Getting Started
----------------
+--------------
 
 Data originally provided: `twitter-archive-enhanced.csv` and `twitter\_image\_class.csv` 
 
@@ -38,7 +38,11 @@ Twitter API select dataframe: `twitter\_status\_dogs.csv`
 
 Data files after cleaning: `twitter\_archive\_master.csv` and `twitter\_archive\_master\_class.csv`
 
-Working Jupyter Notebooks: 
+Working Jupyter Notebooks (most up to date): 
+
+> Main notebook including gathering, cleaning and analysis: 'wrangle\_act.ipynb'
+
+These notebooks were used in the process and then consolidated:
 
 > Gathering: 'wrangle\_project\_notebook\_gather\_nokeys.ipynb' 
 
@@ -46,13 +50,19 @@ Working Jupyter Notebooks:
 
 > Analysis: 'wrangle\_project\_notebook\_visual.ipynb' 
 
-Final reports: 
+
+Final Reports 
+--------------
 
 > Wrangling report: 'wrangle\_report.ipynb' and 'wrangle\_report.html' 
 
 > Data analysis report: 'act\_report.ipynb' and 'act\_report.html'
 
 Prerequisites
--------------
+--------------
 
-Jupyter Notebooks, original data provided, Twitter API access (or use `tweet\_json.txt` instead)
+Jupyter Notebooks, Python (and libraries defined in working jupyter notebook files), original data provided, Twitter API access (or use `tweet\_json.txt` instead)
+
+Licence
+--------------
+The project is uploaded under the [MIT License](https://choosealicense.com/licenses/mit/) and respecting [Udacity's honor code](https://eu.udacity.com/legal/community-guidelines).
